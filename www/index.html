@@ -32,7 +32,7 @@
                 })
         }
 
-        function searchLevel() {
+        function searchDisplacement() {
             let Level = parseInt($("#Displacement").val());
             let TestDataClass = ncmb.DataStore(db);
             TestDataClass.equalTo("Displacement", Displacement).fetchAll().then(function(results) {
@@ -60,7 +60,7 @@
 
         function showResults(results) {
             // テーブルのヘッダを生成
-            let msg = "<table><tr><th>name</th><th>Displacement</th><th></th><th>defence</th></tr>";
+            let msg = "<table><tr><th>name</th><th>Displacement</th><th>bikekinds</th><th>defence</th></tr>";
             for (let i = 0; i < results.length; i++) {
                 // 各データを収めた表の列を生成
                 msg += "<tr>";
